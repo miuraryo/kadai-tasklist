@@ -16,10 +16,10 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
             name = "getAllTasks",
-            query = "SELECT m FROM Task AS m ORDER BY m.id DESC"
+            query = "SELECT t FROM Task AS t ORDER BY t.id DESC"
             )
 })
-@Table(name="tasks")
+@Table(name = "tasks")
 public class Task {
     @Id
     @Column(name = "id")
@@ -29,7 +29,7 @@ public class Task {
     @Column(name = "content", length = 255, nullable = false)
     private String content;
 
-    @Column(name = "create_at", nullable = false)
+    @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
 
     @Column(name = "updated_at", nullable = false)
