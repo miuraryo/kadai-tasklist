@@ -29,7 +29,7 @@ public class Task {
     @Column(name = "content", length = 255, nullable = false)
     private String content;
 
-    @Column(name = "create_at", nullable = false)
+    @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
 
     @Column(name = "updated_at", nullable = false)
