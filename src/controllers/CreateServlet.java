@@ -16,7 +16,7 @@ import utils.DBUtil;
 /**
  * Servlet implementation class CreateServlet
  */
-@WebServlet(name = "create", urlPatterns = { "/create" })
+@WebServlet("/create")
 public class CreateServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -45,6 +45,7 @@ public class CreateServlet extends HttpServlet {
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             t.setCreated_at(currentTime);
             t.setUpdated_at(currentTime);
+
 
             em.getTransaction().begin();
             em.persist(t);

@@ -16,7 +16,7 @@ import utils.DBUtil;
 /**
  * Servlet implementation class ShowServlet
  */
-@WebServlet(name = "show", urlPatterns = { "/show" })
+@WebServlet("/show")
 public class ShowServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

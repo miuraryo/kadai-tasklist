@@ -38,11 +38,11 @@ public class IndexServlet extends HttpServlet {
 
         List<Task> tasks = em.createNamedQuery("getAllTasks", Task.class)
                              .getResultList();
-        
+
         em.close();
-        
+
         request.setAttribute("tasks", tasks);
-        
+
         RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/tasks/index.jsp");
         rd.forward(request, response);
     }
